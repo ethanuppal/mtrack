@@ -1,0 +1,7 @@
+.DS_Store
+main
+main.dSYM/Contents/Info.plist
+*.o
+mtrack.log
+mtrace.analysis
+mtrace/mtrace
