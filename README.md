@@ -80,7 +80,7 @@ bad free: Pointer 0x61f5026be003 freed at main.c:19 was never allocated
 leak: Pointer 0x7f5c858ec280 (893 bytes) last allocated at main.c:37 was not freed.
 ```
 
-That makes much more sense! We see two issues: a bad free and a memory leak. Let's look at the memory leak first. We have leaked 893 bytes on like 37. That line looks like:
+That makes much more sense! We see two issues: a bad free and a memory leak. Let's look at the memory leak first. We have leaked 893 bytes on line 37. That line looks like:
 
 ```c
 void* LOL = tmalloc(893); // random leak
