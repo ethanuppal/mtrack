@@ -6,21 +6,10 @@
 #include "help-version.h"
 #include "allocations.h" // MTRACK_ISSUE_DETECTED
 #include "../_tracker.h"
+#include "errors.h" // message
 
 // Returns true if the given strings are equal in length.
 #define strequ(str, str2) ((str) == NULL ? 0 : strcmp(str, str2) == 0)
-
-enum domain {
-    ERROR
-};
-
-void message(enum domain, const char* msg, const char* fix) {
-    printf("error: %s.", msg);
-    if (fix) {
-        printf("%s.", fix);
-    }
-    putchar('\n');
-}
 
 static void parse_args(int argc, const char* argv[], const char** infile,
                        const char** outfile) {
