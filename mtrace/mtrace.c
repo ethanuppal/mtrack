@@ -1,11 +1,11 @@
 // malloc-tracker: mtrace.c: Analyzes a tracking log for its properties.
 // Copyright (C) 2021 Ethan Uppal. All rights reserved.
 
-#include <string.h> // strncmp
-#include <stdlib.h> // exit
-#include "help-version.h"
+#include <string.h> // strcmp
+#include <stdlib.h> // exit, EXIT_SUCCESS, EXIT_FAILURE
+#include "help-version.h" // mtrack_show_help, mtrack_show_version
 #include "allocations.h" // MTRACK_ISSUE_DETECTED
-#include "../_tracker.h"
+#include "../_tracker.h" // mtrack_allocations_t
 #include "errors.h" // message
 
 // Returns true if the given strings are equal in length.

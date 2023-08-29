@@ -10,7 +10,7 @@ const char mtrack_help_text[] =
     "A tool to parse and analyze mtrace logs.\n"
     "\n"
     "Options:\n"
-    "  -i FILE      Provides the location of the inputted log. Default: mtrack.log.\n"
+    "  -i FILE      Provides the location of the input log. Default: mtrack.log.\n"
     "  -o FILE      Provides the location of the resulting analysis. Default: mtrack.analysis.\n"
     "  --help       Shows this help.\n"
     "  --version    Shows version and license information.\n";

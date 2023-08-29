@@ -1,4 +1,4 @@
-// malloc-tracker: _tracker.h
+// mtrack: _tracker.h
 // Copyright (C) 2021 Ethan Uppal. All rights reserved.
 
 #pragma once

@@ -1,4 +1,4 @@
-// malloc-tracker: tracker.c
+// mtrack: tracker.c
 // Copyright (C) 2021 Ethan Uppal. All rights reserved.
 
 #define MTRACK_ENABLE
@@ -219,6 +219,14 @@ void tdump(trace_dump_mode_t dump_mode) {
     if (dump_mode == TRACE_DUMP_MODE_LOGGING) {
         fclose(stream);
     }
+}
+
+void _tdump(void) {
+    tdump(TRACE_DUMP_MODE_LOGGING);
+}
+
+void tdump_on_exit() {
+    atexit(_tdump);
 }
 
 size_t tusage() {

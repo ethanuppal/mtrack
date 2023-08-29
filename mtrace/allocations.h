@@ -1,4 +1,4 @@
-// malloc-tracker: allocations.h
+// mtrace: allocations.h
 // Copyright (C) 2021 Ethan Uppal. All rights reserved.
 
 #pragma once

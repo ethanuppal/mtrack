@@ -1,4 +1,4 @@
-// malloc-tracker: allocations.c
+// mtrace: allocations.c
 // Copyright (C) 2021 Ethan Uppal. All rights reserved.
 
 #include "allocations.h"

@@ -1,4 +1,4 @@
-// malloc-tracker: tracker.h
+// mtrack: tracker.h
 // Copyright (C) 2021 Ethan Uppal. All rights reserved.
 
 #pragma once
@@ -33,4 +33,5 @@ void _tfree(void* ptr, const char* file, size_t line);
 void tinit(void);
 void tdestroy(void);
 void tdump(trace_dump_mode_t dump_mode);
+void tdump_on_exit(void);
 size_t tusage(void);

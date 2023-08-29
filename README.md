@@ -15,6 +15,8 @@ You can just as easily undefine `MTRACK_ENABLE` to disable tracking functionalit
 
 It is highly recommended you define `MTRACK_AUTOLOG` in your compiler arguments because this will ensure that logs are generated even if the program crashes. If you do not set this flag, you will have to call `tdump(TRACE_DUMP_MODE_LOGGING)` manually at some point before calling `tdestroy`.
 
+> NOTE: I am developing another method that uses `atexit`, which will be highly preferable to expensive I/O for every dynamic memory operation.
+
 ## Usage
 
 To view the current memory footprint of a program, use `tusage`. To manually log the allocations, reallocations and frees in a format meant to be easily digestive by parsers to the standard error use `tdump`. Otherwise, use `MTRACK_AUTOLOG` as explained above (RECOMMENDED).
