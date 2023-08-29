@@ -4,8 +4,7 @@
 #include <string.h> // strcmp
 #include <stdlib.h> // exit, EXIT_SUCCESS, EXIT_FAILURE
 #include "help-version.h" // mtrack_show_help, mtrack_show_version
-#include "allocations.h" // MTRACK_ISSUE_DETECTED
-#include "../_tracker.h" // mtrack_allocations_t
+#include "allocations.h" // MTRACK_ISSUE_DETECTED, mtrack_allocations_t, mtrack_allocations_init, mtrack_allocations_destroy, mtrack_parse, mtrack_scan
 #include "errors.h" // message
 
 // Returns true if the given strings are equal in length.

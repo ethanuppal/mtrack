@@ -33,10 +33,12 @@ typedef struct {
     size_t footprint;
 } malloc_trace_t;
 
+#ifndef _MTRACE_INTERNAL
 static void trace_append(malloc_trace_t* trace, allocation_t allocation);
 static allocation_t* trace_search(malloc_trace_t* trace, void* ptr);
 static void dump_allocation(const allocation_t* allocation,
                              trace_dump_mode_t dump_mode, FILE* stream);
+#endif
 
 #define trace_abort(fmt, ...) do { \
     fprintf(stderr, "malloc-trace abort:%s:%d: " fmt, __FILE__, __LINE__, ## __VA_ARGS__); \

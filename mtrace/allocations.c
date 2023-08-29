@@ -22,9 +22,6 @@ void mtrack_allocations_init(mtrack_allocations_t* allocations) {
 }
 
 void mtrack_allocations_destroy(mtrack_allocations_t* allocations) {
-    // for (size_t i = 0; i < allocations->length; i++) {
-    //     free((char*)allocations->array[i].file);
-    // }
     free(allocations->array);
 }
 
