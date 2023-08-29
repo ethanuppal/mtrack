@@ -5,3 +5,4 @@ main.dSYM/Contents/Info.plist
 mtrack.log
 mtrace.analysis
 mtrace/mtrace
+.vscode/settings.json
