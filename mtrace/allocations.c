@@ -7,6 +7,7 @@
 #include <limits.h> // PATH_MAX
 #include <stdint.h> // uint64_t, uint32_t, uintptr_t
 #include "errors.h" // message
+#define _MTRACE_INTERNAL
 #include "../_tracker.h"
 
 char path[PATH_MAX + 1];

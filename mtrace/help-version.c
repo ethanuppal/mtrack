@@ -23,6 +23,6 @@ const char mtrack_version_text[] =
     "mtrack 1.0\n"
     "Copyright (C) 2021 Ethan Uppal. All rights reserved.\n";
 
-inline void mtrack_show_version() {
+inline void mtrack_show_version(void) {
     fputs(mtrack_version_text, stdout);
 }
