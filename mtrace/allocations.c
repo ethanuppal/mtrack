@@ -6,7 +6,7 @@
 #include <string.h> // memset
 #include <limits.h> // PATH_MAX
 #include <stdint.h> // uint64_t, uint32_t, uintptr_t
-#include <errors.h> // message
+#include "errors.h" // message
 #include "../_tracker.h"
 
 char path[PATH_MAX + 1];
