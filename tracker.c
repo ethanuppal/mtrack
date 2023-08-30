@@ -66,6 +66,9 @@ void* _trealloc(void* ptr, size_t n, const char* file, size_t line) {
 }
 
 void _tfree(void* ptr, const char* file, size_t line) {
+    if (!ptr) {
+        return;
+    }
     allocation_t a = {
         .previous = ptr,
         .pointer = NULL,
