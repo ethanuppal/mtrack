@@ -176,10 +176,10 @@ static void dump_allocation(const allocation_t* allocation,
             switch (allocation->state) {
                 case ALLOCATION_STATE_ALLOCATED: {
                     fprintf(stream, "+ %zu %zu %zu %s\n",
-                    (uintptr_t)allocation->pointer,
-                    allocation->length,
-                    allocation->line,
-                    allocation->file);
+                            (uintptr_t)allocation->pointer,
+                            allocation->length,
+                            allocation->line,
+                            allocation->file);
                     break;
                 }
                 case ALLOCATION_STATE_REALLOCATED: {
@@ -212,6 +212,10 @@ void tdump(trace_dump_mode_t dump_mode) {
         // https://stackoverflow.com/questions/4815251/how-do-i-clear-the-whole-contents-of-a-file-in-c
         fclose(fopen("mtrack.log", "w"));
         stream = fopen("mtrack.log", "a");
+        if (!stream) {
+            perror("fopen");
+            return;
+        }
     }
     const allocation_t* allocation = trace.allocations;
     const size_t old_length = trace.length;
