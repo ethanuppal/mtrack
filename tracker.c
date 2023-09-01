@@ -135,6 +135,10 @@ void tinit() {
     // Empty log file
     fclose(fopen("mtrack.log", "w"));
     logfile = fopen("mtrack.log", "a");
+    if (!logfile) {
+        trace_abort("fopen");
+        return;
+    }
     #endif
 }
 
